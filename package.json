@@ -1,11 +1,1 @@
-{
-  "name": "muni",
-  "private": true,
-  "version": "0.1.0",
-  "workspaces": ["apps/*", "packages/*"],
-  "scripts": {
-    "web": "npm --workspace apps/web run dev",
-    "mobile": "npm --workspace apps/mobile run start",
-    "typecheck": "npm run typecheck --workspaces --if-present"
-  }
-}
+{"name":"muni","private":true,"version":"1.0.0","packageManager":"npm@11.6.2","scripts":{"dev:web":"npm --workspace apps/web run dev","dev:mobile":"npm --workspace apps/mobile run start","build:web":"npm --workspace apps/web run build","typecheck":"npm run typecheck:web","typecheck:web":"npm --workspace apps/web run typecheck"},"workspaces":["apps/*","packages/*"],"engines":{"node":">=22"}}

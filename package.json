@@ -1,0 +1,11 @@
+{
+  "name": "muni",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "web": "npm --workspace apps/web run dev",
+    "mobile": "npm --workspace apps/mobile run start",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

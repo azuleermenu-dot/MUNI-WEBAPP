@@ -1,5 +1,5 @@
 import { createBrowserClient } from '@supabase/ssr';
-import type { Database } from '@muni/shared/database.types';
+import type { Database } from '../../../packages/shared/src/database.types';
 
 let client: ReturnType<typeof createBrowserClient<Database>> | undefined;
 export function getSupabaseBrowser() {

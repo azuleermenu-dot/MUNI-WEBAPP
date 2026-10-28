@@ -1,6 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
-import type { Database } from '@muni/shared/database.types';
+import type { Database } from '../../../packages/shared/src/database.types';
 
 export async function getSupabaseServer() {
   const cookieStore = await cookies();

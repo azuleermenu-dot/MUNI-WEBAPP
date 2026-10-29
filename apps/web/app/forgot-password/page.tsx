@@ -12,7 +12,7 @@ export default function ForgotPassword() {
   async function submit(e:FormEvent<HTMLFormElement>){
     e.preventDefault();setBusy(true);setError('');
     try{
-      const {error}=await createClient().auth.resetPasswordForEmail(email.trim().toLowerCase(),{redirectTo: `${window.location.origin}/reset-password`});
+      const {error}=await createClient().auth.resetPasswordForEmail(email.trim().toLowerCase(),{redirectTo: `${window.location.origin}/auth/callback?next=/reset-password`});
       if(error)throw error;
       setSent(true);
     }catch{setError('We could not send a reset link right now. Check your email address and try again.');}

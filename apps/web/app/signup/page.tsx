@@ -25,7 +25,7 @@ export default function Signup() {
       const supabase = createClient();
       const { data, error: signupError } = await supabase.auth.signUp({
         email: email.trim().toLowerCase(), password,
-        options: { data: { full_name: name.trim(), school_name: 'Minuyan National High School' } },
+        options: { data: { full_name: name.trim(), school_name: 'Minuyan National High School' }, emailRedirectTo: `${window.location.origin}/auth/callback?next=/dashboard` },
       });
       if (signupError) {
         const lower = signupError.message.toLowerCase();
